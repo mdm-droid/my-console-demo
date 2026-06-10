@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administration · Keystone Console</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23169a55'/><path d='M16 6l8 5v10l-8 5-8-5V11z' fill='none' stroke='white' stroke-width='2'/></svg>" />
+</head>
+<body>
+  <div class="shell">
+    <div class="demo-banner">Demo environment — changes are not saved and no live systems are affected.</div>
+
+    <header class="topbar">
+      <a class="brand" href="dashboard.html" style="text-decoration:none">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#169a55"/>
+          <path d="M20 8l9 5.5v13L20 32l-9-5.5v-13z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M20 14l4.5 2.8v5.4L20 25l-4.5-2.8v-5.4z" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="brand__name">Keystone <span>Console</span></span>
+      </a>
+      <div class="searchbar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+        </svg>
+        <input type="search" placeholder="Search settings…" aria-label="Search" />
+      </div>
+      <div class="user-chip">
+        <div class="avatar">DM</div>
+        <div class="who"><b>Dana Morgan</b><small>Operations Admin</small></div>
+        <a class="signout" href="index.html">Sign out</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <a class="back-link" href="dashboard.html">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Back to console
+      </a>
+
+      <div class="page-head">
+        <p class="eyebrow">Administration</p>
+        <h1 class="page-title">Platform configuration</h1>
+        <p class="page-desc">Control how your institution's online and mobile banking platform behaves for end users.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="label">Environment</div><div class="value">Prod</div><div class="delta flat">us-east · v24.3</div></div>
+        <div class="stat"><div class="label">Features live</div><div class="value">38</div><div class="delta up">+2 this month</div></div>
+        <div class="stat"><div class="label">Open change requests</div><div class="value">4</div><div class="delta down">2 awaiting review</div></div>
+        <div class="stat"><div class="label">Last deploy</div><div class="value">3d</div><div class="delta flat">by m.alvarez</div></div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="panel">
+            <div class="panel__head">
+              <h2>Feature toggles</h2>
+              <span class="hint">Applies to all retail online banking users</span>
+            </div>
+            <div class="panel__body">
+              <table class="grid">
+                <thead><tr><th>Feature</th><th>Channel</th><th>Status</th><th style="text-align:right">Enabled</th></tr></thead>
+                <tbody>
+                  <tr><td>Mobile check deposit</td><td>Mobile</td><td><span class="pill ok">Live</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>External account transfers</td><td>Web + Mobile</td><td><span class="pill ok">Live</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Zelle person-to-person</td><td>Web + Mobile</td><td><span class="pill ok">Live</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Card controls &amp; alerts</td><td>Mobile</td><td><span class="pill warn">Pilot</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Wire origination</td><td>Web</td><td><span class="pill muted">Off</span></td><td style="text-align:right"><span class="toggle off"></span></td></tr>
+                  <tr><td>Cardless ATM access</td><td>Mobile</td><td><span class="pill muted">Off</span></td><td style="text-align:right"><span class="toggle off"></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head"><h2>Security policy</h2><span class="hint">Authentication &amp; session</span></div>
+            <div class="panel__body">
+              <table class="grid">
+                <tbody>
+                  <tr><td>Multi-factor for high-risk actions</td><td colspan="2">Required</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Passkey / WebAuthn enrollment</td><td colspan="2">Enabled for all users</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Session timeout</td><td colspan="2">12 minutes idle</td><td style="text-align:right" class="mono">12:00</td></tr>
+                  <tr><td>New-device step-up</td><td colspan="2">Email + one-time passcode</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Legacy SMS fallback</td><td colspan="2">Discouraged</td><td style="text-align:right"><span class="toggle off"></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <div class="panel__head"><h2>Branding</h2></div>
+            <div class="panel__body" style="padding:18px 22px">
+              <p style="margin:0 0 14px;font-size:.88rem;color:var(--ink-muted)">Theme applied to customer-facing online banking.</p>
+              <div style="display:flex;gap:10px;margin-bottom:14px">
+                <span style="width:30px;height:30px;border-radius:7px;background:#169a55;box-shadow:inset 0 0 0 1px #0003"></span>
+                <span style="width:30px;height:30px;border-radius:7px;background:#0f2a3f;box-shadow:inset 0 0 0 1px #0003"></span>
+                <span style="width:30px;height:30px;border-radius:7px;background:#f3f6fa;box-shadow:inset 0 0 0 1px #0002"></span>
+              </div>
+              <button class="btn-sm">Edit theme</button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head"><h2>Recent changes</h2></div>
+            <div class="panel__body">
+              <div class="list-item"><span class="dot"></span><div class="li-body"><b>Card controls moved to pilot</b><p>by Dana Morgan</p></div><time>2h ago</time></div>
+              <div class="list-item"><span class="dot warn"></span><div class="li-body"><b>Wire origination disabled</b><p>by m.alvarez</p></div><time>3d ago</time></div>
+              <div class="list-item"><span class="dot"></span><div class="li-body"><b>Session timeout 15 → 12 min</b><p>by Dana Morgan</p></div><time>1w ago</time></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-foot">Keystone Console · Demo build · For demonstration purposes only.</footer>
+  </div>
+</body>
+</html>

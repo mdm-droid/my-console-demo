@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Console · Keystone</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23169a55'/><path d='M16 6l8 5v10l-8 5-8-5V11z' fill='none' stroke='white' stroke-width='2'/></svg>" />
+</head>
+<body>
+  <div class="shell">
+    <div class="demo-banner">Demo environment — no live banking systems are connected.</div>
+
+    <header class="topbar">
+      <div class="brand">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#169a55"/>
+          <path d="M20 8l9 5.5v13L20 32l-9-5.5v-13z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M20 14l4.5 2.8v5.4L20 25l-4.5-2.8v-5.4z" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="brand__name">Keystone <span>Console</span></span>
+      </div>
+
+      <div class="searchbar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+        </svg>
+        <input type="search" placeholder="Search settings, users, reports…" aria-label="Search" />
+      </div>
+
+      <div class="user-chip">
+        <div class="avatar">DM</div>
+        <div class="who">
+          <b>Dana Morgan</b>
+          <small>Operations Admin</small>
+        </div>
+        <a class="signout" href="index.html">Sign out</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="page-head">
+        <p class="eyebrow">Digital Banking Operations</p>
+        <h1 class="page-title">Welcome back, Dana</h1>
+        <p class="page-desc">Choose a workspace to manage your institution's online banking platform.</p>
+      </div>
+
+      <div class="tile-grid">
+
+        <a class="tile" href="administration.html">
+          <div class="tile__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/>
+              <path d="M9.5 12l1.8 1.8L15 10"/>
+            </svg>
+          </div>
+          <h2 class="tile__title">Administration</h2>
+          <p class="tile__desc">Platform configuration, feature toggles, branding, and security policy.</p>
+          <span class="tile__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </span>
+        </a>
+
+        <a class="tile" href="user-management.html">
+          <div class="tile__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="8" r="3.2"/>
+              <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/>
+              <path d="M16.5 8.2a3 3 0 0 1 0 5.6"/>
+              <path d="M18 14.4c2.2.6 3.5 2.3 3.5 4.6"/>
+            </svg>
+          </div>
+          <h2 class="tile__title">User Management</h2>
+          <p class="tile__desc">Provision employees and end users, assign roles, and manage entitlements.</p>
+          <span class="tile__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </span>
+        </a>
+
+        <a class="tile" href="reporting.html">
+          <div class="tile__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 20V4"/><path d="M4 20h16"/>
+              <rect x="7" y="11" width="3" height="6" rx=".5"/>
+              <rect x="12.5" y="7" width="3" height="10" rx=".5"/>
+              <rect x="18" y="13" width="0" height="4"/>
+            </svg>
+          </div>
+          <h2 class="tile__title">Reporting</h2>
+          <p class="tile__desc">Adoption, transaction volume, and compliance reports for your institution.</p>
+          <span class="tile__arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </span>
+        </a>
+
+      </div>
+    </main>
+
+    <footer class="app-foot">Keystone Console · Demo build · For demonstration purposes only.</footer>
+  </div>
+</body>
+</html>

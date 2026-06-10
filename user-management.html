@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Management · Keystone Console</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23169a55'/><path d='M16 6l8 5v10l-8 5-8-5V11z' fill='none' stroke='white' stroke-width='2'/></svg>" />
+</head>
+<body>
+  <div class="shell">
+    <div class="demo-banner">Demo environment — all users shown are fictitious sample data.</div>
+
+    <header class="topbar">
+      <a class="brand" href="dashboard.html" style="text-decoration:none">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#169a55"/>
+          <path d="M20 8l9 5.5v13L20 32l-9-5.5v-13z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M20 14l4.5 2.8v5.4L20 25l-4.5-2.8v-5.4z" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="brand__name">Keystone <span>Console</span></span>
+      </a>
+      <div class="searchbar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+        </svg>
+        <input type="search" placeholder="Search users…" aria-label="Search" />
+      </div>
+      <div class="user-chip">
+        <div class="avatar">DM</div>
+        <div class="who"><b>Dana Morgan</b><small>Operations Admin</small></div>
+        <a class="signout" href="index.html">Sign out</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <a class="back-link" href="dashboard.html">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Back to console
+      </a>
+
+      <div class="page-head">
+        <p class="eyebrow">User Management</p>
+        <h1 class="page-title">Users &amp; entitlements</h1>
+        <p class="page-desc">Provision banking staff and end users, assign roles, and control access to online banking features.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="label">Active users</div><div class="value">12,847</div><div class="delta up">+184 this week</div></div>
+        <div class="stat"><div class="label">Staff accounts</div><div class="value">63</div><div class="delta flat">8 admins</div></div>
+        <div class="stat"><div class="label">Pending invites</div><div class="value">5</div><div class="delta down">2 expiring soon</div></div>
+        <div class="stat"><div class="label">Locked out</div><div class="value">3</div><div class="delta flat">needs review</div></div>
+      </div>
+
+      <div class="toolbar">
+        <button class="btn-sm primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          Invite user
+        </button>
+        <button class="btn-sm">Bulk import</button>
+        <button class="btn-sm">Export list</button>
+        <button class="btn-sm">Role templates</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head"><h2>Directory</h2><span class="hint">Showing 6 of 12,847</span></div>
+        <div class="panel__body">
+          <table class="grid">
+            <thead><tr><th>User</th><th>Role</th><th>Entitlements</th><th>MFA</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><b>Priya Natarajan</b><br><span class="mono" style="color:var(--ink-muted)">priya.n@institution.com</span></td>
+                <td>Branch Manager</td><td>Transfers · Bill pay · Wires</td>
+                <td><span class="pill ok">Passkey</span></td><td><span class="pill ok">Active</span></td>
+              </tr>
+              <tr>
+                <td><b>Marcus Webb</b><br><span class="mono" style="color:var(--ink-muted)">m.webb@institution.com</span></td>
+                <td>Teller</td><td>Account lookup · Deposits</td>
+                <td><span class="pill ok">Passkey</span></td><td><span class="pill ok">Active</span></td>
+              </tr>
+              <tr>
+                <td><b>Sofia Reyes</b><br><span class="mono" style="color:var(--ink-muted)">s.reyes@institution.com</span></td>
+                <td>Support Agent</td><td>Account lookup · Cases</td>
+                <td><span class="pill warn">SMS only</span></td><td><span class="pill ok">Active</span></td>
+              </tr>
+              <tr>
+                <td><b>Jordan Lee</b><br><span class="mono" style="color:var(--ink-muted)">jordan.lee@institution.com</span></td>
+                <td>Retail Customer</td><td>Transfers · Bill pay</td>
+                <td><span class="pill ok">Passkey</span></td><td><span class="pill bad">Locked</span></td>
+              </tr>
+              <tr>
+                <td><b>Aiko Tanaka</b><br><span class="mono" style="color:var(--ink-muted)">a.tanaka@institution.com</span></td>
+                <td>Commercial Customer</td><td>ACH · Wires · Positive pay</td>
+                <td><span class="pill ok">Passkey</span></td><td><span class="pill ok">Active</span></td>
+              </tr>
+              <tr>
+                <td><b>Daniel Okafor</b><br><span class="mono" style="color:var(--ink-muted)">d.okafor@institution.com</span></td>
+                <td>Retail Customer</td><td>Transfers</td>
+                <td><span class="pill muted">None</span></td><td><span class="pill warn">Invited</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-foot">Keystone Console · Demo build · For demonstration purposes only.</footer>
+  </div>
+</body>
+</html>

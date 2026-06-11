@@ -95,6 +95,30 @@
           </table>
         </div>
       </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Scheduled exports</h2>
+          <button class="btn-sm primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+            New scheduled export
+          </button>
+        </div>
+        <div class="panel__body">
+          <table class="grid">
+            <thead><tr><th>Report</th><th>Format</th><th>Destination</th><th>Next run</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr><td><b>Daily transaction summary</b></td><td class="mono">CSV</td><td>SFTP · <span class="mono">/exports/daily</span></td><td>Tomorrow · 06:15</td><td><span class="pill ok">Active</span></td></tr>
+              <tr><td><b>Suspicious activity (BSA/AML)</b></td><td class="mono">PDF</td><td>Email · <span class="mono">compliance@institution.com</span></td><td>Today · 23:00</td><td><span class="pill ok">Active</span></td></tr>
+              <tr><td><b>Digital adoption by segment</b></td><td class="mono">XLSX</td><td>Email · <span class="mono">growth-team@institution.com</span></td><td>Mon · Jun 15</td><td><span class="pill ok">Active</span></td></tr>
+              <tr><td><b>Bill pay reconciliation</b></td><td class="mono">CSV</td><td>SFTP · <span class="mono">/exports/finance</span></td><td>Jul 1 · 06:30</td><td><span class="pill ok">Active</span></td></tr>
+              <tr><td><b>Regulator call report extract</b></td><td class="mono">XLSX</td><td>Secure file share · <span class="mono">/regulatory</span></td><td>Jun 30 · 07:00</td><td><span class="pill warn">Reauth needed</span></td></tr>
+              <tr><td><b>Failed login analysis</b></td><td class="mono">JSON</td><td>Webhook · <span class="mono">SIEM intake</span></td><td>—</td><td><span class="pill muted">Paused</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </main>
 
     <footer class="app-foot">Keystone Console · Demo build · For demonstration purposes only.</footer>

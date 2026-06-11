@@ -12,21 +12,25 @@ real authentication and no live banking systems**.
 1. **`index.html`** — a sign-in page that *pretends* to use a passkey. Clicking
    **"Sign in with a passkey"** shows a simulated device/biometric prompt, then
    automatically forwards to the dashboard. No credentials are checked or sent anywhere.
-2. **`dashboard.html`** — the main console with three tiles:
+2. **`dashboard.html`** — the main console with five tiles:
    - **Administration** → `administration.html`
    - **User Management** → `user-management.html`
    - **Reporting** → `reporting.html`
-3. The three feature pages show illustrative, fictional sample data relevant to a bank
+   - **Alerts** → `alerts.html`
+   - **Audit Trail** → `audit-trail.html`
+3. The feature pages show illustrative, fictional sample data relevant to a bank
    employee managing online/mobile banking.
 
 ## Files
 
 ```
 index.html            Login (fake passkey)
-dashboard.html        Three-tile console
+dashboard.html        Five-tile console
 administration.html   Feature toggles, security policy, branding
 user-management.html  User directory, roles, entitlements
-reporting.html        Adoption, volume, scheduled reports
+reporting.html        Adoption, volume, scheduled reports & exports
+alerts.html           Security/system alerts, notification rules
+audit-trail.html      Admin action log with dual-control review
 assets/styles.css     Shared styling
 assets/app.js         Simulated passkey flow
 ```

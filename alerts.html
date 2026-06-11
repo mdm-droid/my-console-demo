@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alerts · Keystone Console</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23169a55'/><path d='M16 6l8 5v10l-8 5-8-5V11z' fill='none' stroke='white' stroke-width='2'/></svg>" />
+</head>
+<body>
+  <div class="shell">
+    <div class="demo-banner">Demo environment — changes are not saved and no live systems are affected.</div>
+
+    <header class="topbar">
+      <a class="brand" href="dashboard.html" style="text-decoration:none">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="9" fill="#169a55"/>
+          <path d="M20 8l9 5.5v13L20 32l-9-5.5v-13z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M20 14l4.5 2.8v5.4L20 25l-4.5-2.8v-5.4z" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="brand__name">Keystone <span>Console</span></span>
+      </a>
+      <div class="searchbar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>
+        </svg>
+        <input type="search" placeholder="Search alerts…" aria-label="Search" />
+      </div>
+      <div class="user-chip">
+        <div class="avatar">DM</div>
+        <div class="who"><b>Dana Morgan</b><small>Operations Admin</small></div>
+        <a class="signout" href="index.html">Sign out</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <a class="back-link" href="dashboard.html">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        Back to console
+      </a>
+
+      <div class="page-head">
+        <p class="eyebrow">Security &amp; Operations</p>
+        <h1 class="page-title">Alerts &amp; notifications</h1>
+        <p class="page-desc">Monitor recent security and system alerts across the platform, and control how your team gets notified.</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat"><div class="label">Open alerts</div><div class="value">7</div><div class="delta down">2 critical</div></div>
+        <div class="stat"><div class="label">Resolved · 24h</div><div class="value">19</div><div class="delta up">+6 vs yesterday</div></div>
+        <div class="stat"><div class="label">Median time to ack</div><div class="value">4m</div><div class="delta up">−2m this week</div></div>
+        <div class="stat"><div class="label">Notification rules</div><div class="value">12</div><div class="delta flat">9 active</div></div>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <div class="panel">
+            <div class="panel__head">
+              <h2>Recent alerts</h2>
+              <span class="hint">Security and system events · last 48 hours</span>
+            </div>
+            <div class="panel__body">
+              <div class="toolbar" style="padding:14px 22px 0">
+                <button class="btn-sm primary">Acknowledge all</button>
+                <button class="btn-sm">Filter: All severities</button>
+                <button class="btn-sm">Export</button>
+              </div>
+              <table class="grid">
+                <thead><tr><th>Severity</th><th>Alert</th><th>Source</th><th>Status</th><th style="text-align:right">When</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="pill bad">Critical</span></td><td>Failed login burst — 41 attempts on 6 accounts</td><td>Auth service</td><td><span class="pill warn">Investigating</span></td><td style="text-align:right">12m ago</td></tr>
+                  <tr><td><span class="pill bad">Critical</span></td><td>Wire approval attempted from unrecognized device</td><td>Payments</td><td><span class="pill warn">Step-up sent</span></td><td style="text-align:right">35m ago</td></tr>
+                  <tr><td><span class="pill warn">Warning</span></td><td>API latency above 800 ms (p95) in us-east</td><td>Platform</td><td><span class="pill ok">Acknowledged</span></td><td style="text-align:right">1h ago</td></tr>
+                  <tr><td><span class="pill warn">Warning</span></td><td>3 admin entitlement changes outside business hours</td><td>Entitlements</td><td><span class="pill muted">Open</span></td><td style="text-align:right">3h ago</td></tr>
+                  <tr><td><span class="pill warn">Warning</span></td><td>Mobile deposit rejection rate at 9.2% (threshold 8%)</td><td>Deposits</td><td><span class="pill ok">Acknowledged</span></td><td style="text-align:right">5h ago</td></tr>
+                  <tr><td><span class="pill muted">Info</span></td><td>Nightly core sync completed with 2 retried batches</td><td>Core banking</td><td><span class="pill ok">Resolved</span></td><td style="text-align:right">9h ago</td></tr>
+                  <tr><td><span class="pill muted">Info</span></td><td>TLS certificate for ach-gateway renews in 14 days</td><td>Infrastructure</td><td><span class="pill muted">Scheduled</span></td><td style="text-align:right">1d ago</td></tr>
+                  <tr><td><span class="pill bad">Critical</span></td><td>Zelle send failures spiked to 4.1% for 11 minutes</td><td>Payments</td><td><span class="pill ok">Resolved</span></td><td style="text-align:right">1d ago</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h2>Notification rules</h2>
+              <span class="hint">Who gets paged, and through which channel</span>
+            </div>
+            <div class="panel__body">
+              <table class="grid">
+                <thead><tr><th>Rule</th><th>Channel</th><th>Recipients</th><th style="text-align:right">Active</th></tr></thead>
+                <tbody>
+                  <tr><td>Critical security alerts — page immediately</td><td>SMS + Email</td><td>On-call security</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Failed login bursts &gt; 25 attempts / 10 min</td><td>Email</td><td>Fraud ops team</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Wire &amp; ACH anomalies over $50,000</td><td>SMS + Email</td><td>Payments leads</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>System latency &amp; uptime warnings</td><td>Email</td><td>Platform engineers</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Entitlement changes outside business hours</td><td>Email digest</td><td>Operations admins</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Daily alert summary — 7:00 AM</td><td>Email digest</td><td>All console staff</td><td style="text-align:right"><span class="toggle"></span></td></tr>
+                  <tr><td>Info-level platform notices</td><td>In-console only</td><td>—</td><td style="text-align:right"><span class="toggle off"></span></td></tr>
+                  <tr><td>Weekend maintenance windows</td><td>SMS</td><td>On-call platform</td><td style="text-align:right"><span class="toggle off"></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="panel">
+            <div class="panel__head"><h2>Add a rule</h2></div>
+            <div class="panel__body" style="padding:18px 22px">
+              <p style="margin:0 0 14px;font-size:.88rem;color:var(--ink-muted)">Route a new alert type to a team or channel. Rules apply within one minute.</p>
+              <button class="btn-sm primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                New notification rule
+              </button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head"><h2>On-call now</h2></div>
+            <div class="panel__body">
+              <div class="list-item"><span class="dot"></span><div class="li-body"><b>Security — r.okafor</b><p>Until 8:00 PM, then j.whitfield</p></div><time>now</time></div>
+              <div class="list-item"><span class="dot"></span><div class="li-body"><b>Platform — m.alvarez</b><p>Weekly rotation, ends Friday</p></div><time>now</time></div>
+              <div class="list-item"><span class="dot warn"></span><div class="li-body"><b>Payments — unassigned</b><p>Escalates to operations admins</p></div><time>gap</time></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head"><h2>Recent notifications</h2></div>
+            <div class="panel__body">
+              <div class="list-item"><span class="dot bad"></span><div class="li-body"><b>Paged on-call security</b><p>Failed login burst · SMS to r.okafor</p></div><time>12m ago</time></div>
+              <div class="list-item"><span class="dot"></span><div class="li-body"><b>Email sent to fraud ops</b><p>Wire approval step-up triggered</p></div><time>34m ago</time></div>
+              <div class="list-item"><span class="dot warn"></span><div class="li-body"><b>Latency warning emailed</b><p>Platform engineers · us-east p95</p></div><time>1h ago</time></div>
+              <div class="list-item"><span class="dot"></span><div class="li-body"><b>Daily summary delivered</b><p>23 recipients · 7:00 AM</p></div><time>11h ago</time></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-foot">Keystone Console · Demo build · For demonstration purposes only.</footer>
+  </div>
+</body>
+</html>
